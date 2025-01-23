@@ -1,0 +1,154 @@
+/* global */
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+::before {
+  box-sizing: inherit;
+}
+
+::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+  min-width: 320px;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+/* app */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border: 1px solid black;
+  outline: none;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  display: none;
+  width: 100%;
+  background: white;
+}
+
+.dropdown-item {
+  margin-top: -1px;
+  margin-bottom: -1px;
+  padding: 10px;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: pink;
+}
+
+.dropdown-item:first-child {
+  border-top: 1px solid black;
+}
+
+.repo-list {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+}
+
+.repo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: pink;
+  border: 1px solid crimson;
+}
+
+.repo-info {
+  display: grid;
+  gap: 5px;
+}
+
+.repo-remove {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.repo-remove::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: crimson;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.repo-remove::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: crimson;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
